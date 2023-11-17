@@ -1,7 +1,82 @@
-@use '../../style' as s;
+.page {
+  margin: 0 auto;
+  width: 375px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
-main {
-	background: s.color(dark);
-	color: s.color(light);
-	padding: s.space(4);
-} 
+.button {
+  transition: opacity 0.7s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 12px;
+
+  &--viewed {
+    background-color: #fff;
+    opacity: 0.7;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__category {
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 15px;
+
+    &-list {
+      display: flex;
+      gap: 8px;
+    }
+
+    &--1 {
+      background-color: #f7e9e1;
+      color: #f46f17;
+    }
+
+    &--2 {
+      background-color: #f6e8ef;
+      color: #ef5da8;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    color: #888888;
+  }
+
+  &__text {
+    line-height: 24px;
+  }
+}
